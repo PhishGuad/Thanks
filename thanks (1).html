@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="icon" href="eng.jpg" type="imag/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+    <title>Thanks</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-variation-settings:
+             "slnt" 0,
+             "CRSV" 0.5,
+             "ELSH" 0,
+             "ELXP" 0;
+                         font-family: "LXGW WenKai TC", cursive;
+                     
+
+        }
+
+        *::selection{
+          color: rgba(0, 171, 171, 0.702);
+          background-color: black;
+        }
+
+        html{
+                scrollbar-color: rgba(1, 220, 220, 0.888) #111;        
+                scrollbar-width: auto;
+                scroll-behavior: smooth;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            justify-content: center;
+            align-items: center;
+            padding: 90px 16px 30px; /* بديل الـ br المتكررة، بيشتغل بشكل ثابت في كل الشاشات */
+            background-image:linear-gradient(to right,#01022d8e,#00000082),
+                url('r.jpg');
+        
+        }
+ 
+    .card {
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      box-shadow: 0 2px 20px rgba(1, 220, 220, 0.888);
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      min-height: 150px;
+      padding: clamp(90px, 22vw, 135px) 20px 30px;
+      overflow: visible;
+    }
+
+    h1 {
+      color: rgb(218, 214, 214);
+      font-size: clamp(24px, 6vw, 38px);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    p {
+      color: rgb(230, 228, 228);
+      font-size: clamp(15px, 4vw, 20px);
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+
+
+     .heart {
+      font-size: clamp(24px, 5vw, 35px);
+      color: #ff4d88;
+      position: absolute;
+      bottom: 20px;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .heart.left {
+      left: 20px;
+    }
+
+    .heart.right {
+      right: 20px;
+    }
+
+    /* حركة القلب */
+    @keyframes floatHeart {
+      0% { bottom: 20px; opacity: 1; }
+      50% { bottom: 100%; opacity: 0; }
+      51% { bottom: -40px; opacity: 0; }
+      100% { bottom: 20px; opacity: 1; }
+    }
+
+    .animate {
+      animation: floatHeart 2s ease-in-out forwards;
+    }
+
+    img{
+      position: absolute;
+      top: clamp(-135px, -22vw, -90px);
+      left: 50%;
+      transform: translateX(-50%);
+      height: clamp(160px, 45vw, 270px);
+      width: clamp(140px, 40vw, 240px);
+      border-radius: 16px;
+      box-shadow: 0 2px 20px rgba(1, 220, 220, 0.888);
+      object-fit: cover;
+      z-index: 2;
+
+    }
+    .spaeng{
+      color: rgba(1, 220, 220, 0.888);
+    }
+      .party-emoji{
+      position: absolute;
+      font-size: clamp(18px, 4vw, 26px);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    @keyframes flyLeft{
+      0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+      100% { opacity: 0; transform: translate(-160px, var(--fly-y, -40px)) scale(0.6) rotate(-45deg); }
+    }
+
+    @keyframes flyRight{
+      0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+      100% { opacity: 0; transform: translate(160px, var(--fly-y, -40px)) scale(0.6) rotate(45deg); }
+    }
+
+    /* شاشات صغيرة (موبايل) - مسافة طيران أقصر عشان الإيموجيهات متخرجش برا الشاشة */
+    @media (max-width: 480px) {
+      @keyframes flyLeft{
+        0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+        100% { opacity: 0; transform: translate(-70px, var(--fly-y, -30px)) scale(0.6) rotate(-45deg); }
+      }
+      @keyframes flyRight{
+        0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+        100% { opacity: 0; transform: translate(70px, var(--fly-y, -30px)) scale(0.6) rotate(45deg); }
+      }
+
+      body{
+        padding: 80px 10px 20px;
+      }
+    }
+
+    @media (max-width: 340px){
+      h1{
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+  
+    <img src="eng.jpg" alt="Game invitation">
+       <span class="heart right" id="heartRight">🎉</span>
+
+    <br>
+    <h1>Eng.Mohammed Emad</h1>
+    <p>Thank you <span class="spaeng"> ❤ </span>for all the effort you’ve made for us &nbsp; </p>
+  </div>
+
+ <script>
+    const heartRight = document.getElementById("heartRight");
+    const card = document.querySelector(".card");
+    const pTag = document.querySelector("p");
+
+    const celebrationEmojis = ["🎉", "🎊", "✨", "🥳", "🎈"];
+
+    function animateHeart() {
+      heartRight.classList.add("animate");
+      setTimeout(() => {
+        heartRight.classList.remove("animate");
+      }, 2000);
+    }
+
+    function spawnBurst(originEl, side, count = 5) {
+      const cardRect = card.getBoundingClientRect();
+      const originRect = originEl.getBoundingClientRect();
+
+      // موقع نقطة الانطلاق نسبةً للكارت
+      const startTop = originRect.top - cardRect.top + originRect.height / 2;
+      const startLeft = side === "left"
+        ? originRect.left - cardRect.left
+        : originRect.right - cardRect.left;
+
+      for (let i = 0; i < count; i++) {
+        const span = document.createElement("span");
+        span.className = "party-emoji";
+        span.textContent = celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)];
+
+        span.style.top = `${startTop + (Math.random() * 30 - 15)}px`;
+        span.style.left = `${startLeft}px`;
+        span.style.setProperty("--fly-y", `${Math.random() * 80 - 40}px`);
+        span.style.animation = `${side === "left" ? "flyLeft" : "flyRight"} ${1 + Math.random() * 0.5}s ease-out forwards`;
+        span.style.animationDelay = `${i * 0.07}s`;
+
+        card.appendChild(span);
+
+        setTimeout(() => span.remove(), 1800);
+      }
+    }
+
+    heartRight.addEventListener("click", () => {
+      animateHeart();
+      // 5 إيموجيهات من ناحية الشمال (جنب النص)
+      spawnBurst(pTag, "left", 5);
+      // 5 إيموجيهات من ناحية اليمين (جنب الإيموجي نفسه)
+      spawnBurst(heartRight, "right", 5);
+    });
+  </script>
+</body>
+</html>
